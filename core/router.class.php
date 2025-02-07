@@ -156,7 +156,9 @@ class Router
                 $params = array($this->url_clean);
                 // mi ricavo il nome dei parametri 
                 foreach($matches as $key => $match){
-                  $params[] = $match;
+                    if(is_string($key)){
+                        $params[] = $match;
+                    }
                 }
                 // imposto i parametri e la funzione di callback
                 $this->params = $params;

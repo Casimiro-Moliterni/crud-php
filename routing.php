@@ -10,6 +10,9 @@ $Router->route('/chi-siamo/<*>',function($args){
 //pagina dove siamo con parametro numerico
 $Router->route('/dove-siamo/<#id>',function($args){
     echo'<h1>Dovesiamo</h1>';
+    echo '<pre>';
+    var_dump($args);
+    echo '</pre>';
 });
 //pagina blog con parametro stringa
 $Router->route('/blog/<:slug>',function($args){
